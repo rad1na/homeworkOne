@@ -1,22 +1,33 @@
-body {
+* {
     
-    margin-left:20%;
-    margin-right:20%;
-    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family:"Roboto";
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 .main-container {
-    
     display:grid;
-    grid-gap: 20px;
-    
 }
 
 .nav-bar {
+    margin: 0 10% 0 10%;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     justify-content: space-between;
-    height: 75px;
+    height: 5rem;
     align-items: center;
 }
 
@@ -31,7 +42,166 @@ body {
     justify-content: right;
 
 }
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    margin: 0 10% 0 10%;
+    grid-gap: 1.2rem;
+    color: #0a0f2e;
+}
+
+.nav-list li {
+    display: inline;
+    list-style-type: none;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #b0b2bb;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+.nav-list li a:hover {
+
+    border-bottom: 3px solid;
+    border-bottom-color: #00b4ff;
+}
+
+li a img {
+    height: 1rem;
+}
 
 .image-showcase {
-    width: 200%; /* treba fix */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: url(/homeworkOne/resources/watchBG.svg);
+    background-size: cover;
+    background-position: center;
+    height: 30rem;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    
+}
+
+.image-content {
+
+    margin-left: 10%;
+    
+}
+
+.btn-shop {
+    height: 2.5rem;
+    width: 8.5rem;
+    background-color: #00b4ff;
+    color: white;
+    border: none;
+    font-weight: 500;
+}
+
+.btn-shop:hover {
+    transition: box-shadow 0.3s linear;
+    box-shadow: 0px 0px 3px 3px #0084bb;
+}
+.arrow {
+    height: 1rem;
+}
+
+.nav-arrows a{
+    padding: 0.5rem;
+}
+
+.featured-text {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.featured-categories {
+    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+
+}
+
+.category {
+    background-color: mediumblue;
+    height: 10rem;
+}
+
+.best-price {
+    display:grid;
+    grid-template-columns: 3fr 1.5fr 1.5fr;
+    grid-column-gap: 1.5rem;
+    background-color: red;
+}
+
+.best-priced-item {
+
+    background-color: yellow;
+    height: 15rem;
+}
+
+.item {
+    background-color: purple;
+    height: 15rem;
+}
+
+.items {
+    display:grid;
+    grid-template-columns: repeat(4, 1.5fr);
+    grid-gap: 1.5rem;
+    grid-auto-rows: auto;
+}
+
+.blog-content {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-column-gap: 1.5rem;
+    grid-auto-rows: auto;
+}
+
+.blog-box {
+    background-color: mediumturquoise;
+    height: 20rem;
+}
+
+.brands {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-auto-rows: auto;
+}
+
+.brand-item {
+    background-color: olive;
+    height: 10rem;
+}
+
+.subscribe-box {
+    height: 20rem;
+    background-color: grey;
+    margin-top: 1.2rem;
+}
+
+footer {
+    background-color: navy;
+    height: 25rem;
+}
+
+@media only screen and (max-width: 1000px){
+    .content {
+        margin: 0 2% 0 2%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .featured-categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
