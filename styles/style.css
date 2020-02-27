@@ -62,17 +62,33 @@
 .main-container {
     display: grid;
     grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    row-gap: 20px;
     
 }
 
 .image-showcase {
-    background-image: url(/homeworkOne/resources/watchBG.svg);
-    background-size: cover;
-    max-height: 23vh;
+    
+    background-image: url(/homeworkOne/resources/watchBGsmall.svg);
+    background-size: contain;
+    background-repeat: repeat-x;
+    min-height: 100%;
+    width: auto;
 }
 
 .image-showcase p {
+    margin-top: 45%;
+    margin-left: 2%;
+}
 
+.image-showcase h1 {
+    margin-left: 2%;
+    font-size: 24px;
+}
+
+.featured-text {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 
