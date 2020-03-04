@@ -1,0 +1,376 @@
+* {
+    --marg: 15%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Roboto";
+}
+
+html {
+    font-size: 16px;
+    
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+.main-container {
+    display:grid;
+}
+
+p {
+    font-weight: 500;
+    color: #b0b2bb;
+}
+
+.nav-bar {
+    margin: 0 var(--marg) 0 var(--marg);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+    position: relative;
+}
+
+.mid-menu {
+    display:grid;
+    justify-content: center;
+   
+}
+
+.right-menu {
+    display:grid;
+    justify-content: right;
+
+}
+.nav-list li {
+    display: inline;
+    list-style-type: none;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #b0b2bb;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+
+.nav-list li a:hover {
+
+    border-bottom: 3px solid;
+    border-bottom-color: #00b4ff;
+}
+li a img {
+    height: 1rem;
+}
+
+.content {
+  /*  background-color: #00b4ff;
+    background-image: url(/homeworkOne/resources/contactBG.jpg);
+    background-position: center;
+    background-size: cover; */
+    height: 100%;
+    width: 100%;
+}
+
+.form-container {
+    
+    display: grid;
+    justify-content: center;
+    margin: 5% var(--marg) 5% var(--marg);
+    background: linear-gradient(180deg,rgba(0,99,140,90%) 0%, rgba(0,36,51,90%) 100%);
+    height:auto;
+    padding: 3rem;
+    border-radius: 1.5rem;
+}
+
+.form-header {
+    color:white;
+    text-align: center;
+}
+
+.form-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-gap: 1rem;
+    align-items: center;
+    color: white;
+}
+
+.form-field input {
+    background-color: rgba(7, 50, 68, 0.74);
+    border: 1px solid rgba(5, 22, 29, 0.3);
+    border-radius: 1rem;
+    height: 2.5rem;
+    width: 100%;
+    margin-top: 0.7rem;
+    font-size: 1rem;
+    color: white;
+    padding-left: 0.6rem;
+}
+
+.form-field input::placeholder , textarea::placeholder{
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.form-field input:focus , textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 0.3rem 0.3rem #00b4ff;
+    transition: box-shadow 0.3s linear;
+}
+
+.form-field textarea {
+    background-color: rgba(7, 50, 68, 0.74);
+    border: 1px solid rgba(5, 22, 29, 0.3);
+    border-radius: 1rem;
+    width: 100%;
+    resize: none;
+    min-height: 10rem;
+    height:auto;
+    margin-top: 0.7rem;
+    font-size: 1rem;
+    color: white;
+    padding: 0.4rem 0 0 0.4rem;
+}
+
+/* Footer i meni */
+
+footer {
+    background-color: #0a0f2e;
+    height:auto;
+    display:grid;
+    grid-template-rows: 4fr 1fr;
+}
+
+
+
+.footer-columns {
+    
+    display:grid;
+    grid-template-columns: repeat(3, 2fr);
+    margin: 0 var(--marg) 0 var(--marg);
+    grid-gap: 2rem;
+    align-items: center;
+    grid-auto-rows: auto;
+    padding: 2rem 0 2rem 0;
+
+}
+
+#footer-logo {
+    max-height: 2rem;
+}
+
+.footer-list {
+    list-style-type: none;
+    color: white;
+}
+
+.footer-list li{
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.footer-list li img {
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+
+.footer-col {
+    color:white;
+    justify-self: center;
+}
+
+.footer-col li a {
+    text-decoration: none;
+    color: #b0b2bb;
+    font-weight: 500;
+}
+.footer-bottom {
+    margin: 0 var(--marg) 0 var(--marg);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    grid-gap: 1.5rem;
+    align-items: center;
+    color: #b0b2bb;
+    font-weight: 500;
+}
+
+#bazar {
+    color: #00b4ff;
+}
+
+.footer-bottom-mid {
+    justify-self: center;
+}
+.footer-bottom-mid img {
+    margin: 0 0.3rem 0 0.3rem;
+    height: 1.8rem;
+}
+
+.footer-bottom-right {
+    justify-self: right;
+}
+
+.footer-bottom-right img {
+    margin: 0 0.5rem 0 0.5rem;
+    height: 1rem;
+}
+/* nav-bar sa checkboxom */
+#toggle, #toggleLabel {
+    display:none;
+    font-size: 2rem;
+}
+
+.menu {
+    display: none;
+}
+
+.menu a {
+    background-color: white;
+    text-decoration: none;
+    color: #b0b2bb;
+    box-sizing: border-box;
+    padding: 0.5rem;
+
+}
+
+.menu a img {
+    height: 1rem;
+    vertical-align: middle;
+    color: grey;
+}
+
+@media only screen and (max-width: 1100px){
+    * {
+        --marg: 2%;
+    }
+
+    html {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+.footer-columns {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "des des" "fc1 fc2";
+        grid-gap: 1rem;
+    }
+    #fc1 {
+        grid-area: fc1;
+    }
+
+    #fc2 {
+        grid-area: fc2;
+    }
+
+    .footer-desc {
+        grid-area: des;
+    }
+.footer-bottom {
+        grid-template-columns: 1fr;
+        padding: 1rem 0 1rem 0;
+
+    }
+
+    .footer-bottom-left ,.footer-bottom-mid ,.footer-bottom-right {
+        justify-self: center;
+    }
+
+    .footer-bottom-right img{
+        height: 2rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    html {
+        font-size: 18px;
+    }
+.footer-columns {
+        grid-template-columns: 1fr;
+        grid-template-areas: "des" "fc1" "fc2";
+        grid-gap: 1rem;
+    }
+
+}
+
+@media only screen and (max-width:700px){
+    .nav-bar {
+        grid-template-columns: 1fr 1fr;
+    }
+    #toggleLabel {
+        display: block;
+        cursor: pointer;
+        justify-self:right;
+    }
+    .right-menu, .mid-menu {
+        display: none;
+    }
+
+    .menu {
+        text-align: center;
+        width: 104%;
+        margin: 0 -2% 0 -2%;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #b0b2bb;
+    }
+
+    .menu a:hover {
+        color: #00b4ff;
+        transition: color 0.5s linear;
+    }
+
+    #toggle:checked + .menu {
+        
+        display:block;
+        position: absolute;
+        top: 5rem;
+        z-index: 2;
+    }
+
+}
+
+@media only screen and (max-width:550px){
+    html {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    h5 {
+        font-size: 0.8rem;
+    }
+
+}
