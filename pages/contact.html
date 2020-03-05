@@ -48,27 +48,37 @@
                 </ul>
             </div>
         </nav>
-        <div class="content">
-                <div class="form-container">
-                    <div class="form-header">
-                        <h1 class="animated fadeInDown delay-1s">We care about our customers!</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ipsam consectetur numquam, assumenda expedita ad, deserunt delectus aliquid laudantium minus nisi! Voluptatem rem neque minus est atque sed quasi dolores.</p>
+        <div class="main-content">
+            <div class="grid-container">
+                <form action="#">
+                    <div class="form-container animated fadeInLeft">
+                        <div class="form-header">
+                            <h1 class="animated fadeInDown delay-1s">We care about our customers!</h1>
+                            <p>Whether you have a question about features, pricing, items, order, delivery or anything else, our team is here 24/7 to answer you questions.<br><br> Feel free to contact us with the form below.</p>
+                        </div>
+                        <div class="form-content">
+                            <div class="form-field">
+                                <label for="text-name"><h4>Your Name:</h4></label>
+                                <input type="text" id="text-name" name="text-name" placeholder="Please input your full name" required> 
+                            </div>
+                            <div class="form-field">
+                                <label for="mail"><h4>Your E-mail address:</h4></label>
+                                <input type="email" id="mail" name="mail" placeholder="Please input a valid E-mail address" required>
+                            </div>
+                            <div class="form-field">
+                                <h4>Why are you contacting us:</h4>
+                                <textarea name="custom-text" id="textarea-input" placeholder="Maximum characters allowed - 300" maxlength="300" required></textarea>
+                            </div>
+                            <div class="form-field">
+                                <button type="submit" class="form-button animated pulse">SEND</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-content">
-                        <div class="form-field">
-                            <label for="text-name"><h4>Your Name:</h4></label>
-                            <input type="text" id="text-name" placeholder="Please input your full name" required>
-                        </div>
-                        <div class="form-field">
-                            <label for="mail"><h4>Your E-mail address:</h4></label>
-                            <input type="email" id="mail" placeholder="Please input a valid E-mail address" required>
-                        </div>
-                        <div class="form-field">
-                            <h4>Why are you contacting us:</h4>
-                            <textarea name="custom-text" id="textarea-input" placeholder="Maximum characters allowed - 300" maxlength="300"></textarea>
-                        </div>
+                </form>
+                    <div class="form-image animated fadeInRight">
+                        <img src="/homeworkOne/resources/formimage.svg" alt="">
                     </div>
-                </div>
+            </div>
         </div>
         <footer>
             <div class="footer-columns"> 
