@@ -115,25 +115,30 @@ li a img {
     align-items:center;
     padding: 1rem;
 }
+
+.text-container p {
+    color:#4f5155;
+}
 .buttons {
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1.5rem;
 }
-button {
+.button {
     
     height: 2.5rem;
     width:100%;
     border: none;
     border-radius: 1rem;
+    text-align: center;
 }
 
-button a {
+.button a {
     width: 100%;
     height: auto;
 }
 
-button img {
+.button img {
     height: 100%;;
     width: auto;
     padding: 0.5rem;
@@ -252,28 +257,13 @@ footer {
     height: 1rem;
 }
 /* nav-bar sa checkboxom */
+.nav-list span {
+    display:none;
+}
+
 #toggle, #toggleLabel {
     display:none;
     font-size: 2rem;
-}
-
-.menu {
-    display: none;
-}
-
-.menu a {
-    background-color: white;
-    text-decoration: none;
-    color: #b0b2bb;
-    box-sizing: border-box;
-    padding: 0.5rem;
-
-}
-
-.menu a img {
-    height: 1rem;
-    vertical-align: middle;
-    color: grey;
 }
 @media only screen and (max-width: 1400px){
     * {
@@ -354,39 +344,51 @@ footer {
     .nav-bar {
         grid-template-columns: 1fr 1fr;
     }
+
+    .menu {
+        display: none;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 104%;
+        margin: 0 -2% 0 -2%;
+    }
+
+    .menu .nav-list a {
+        display: block;
+        text-align: center;
+        background-color: white;
+        border-bottom: 1px solid #b0b2bb;
+    }
+
+    .menu .nav-list a:hover {
+        border-bottom: 1px solid #b0b2bb;
+        color: #00b4ff;
+    }
+    
     #toggleLabel {
         display: block;
         cursor: pointer;
         justify-self:right;
     }
-    .right-menu, .mid-menu {
-        display: none;
-    }
-
-    .menu {
-        text-align: center;
-        width: 104%;
-        margin: 0 -2% 0 -2%;
-        display: none;
-    }
-
-    .menu a {
-        display: block;
-        border-bottom: 1px solid #b0b2bb;
-    }
-
-    .menu a:hover {
-        color: #00b4ff;
-        transition: color 0.5s linear;
-    }
-
-    #toggle:checked + .menu {
-        
+    
+    #toggle:checked + .mid-menu {
         display:block;
         position: absolute;
         top: 5rem;
         z-index: 2;
     }
+
+    #toggle:checked ~ .right-menu {
+        display:block;
+        position: absolute;
+        top: 14.1rem;
+        z-index: 3;
+    }
+
+    .nav-list span {
+        display: inline;
+    }
+
     .grid-content {
         grid-template-columns: 1fr;
         grid-template-areas: "image" "texts" "frames" "frames";
@@ -434,4 +436,10 @@ footer {
         width: 100%;
     }
 
+    #toggle:checked ~ .right-menu {
+        display:block;
+        position: absolute;
+        top: 14rem;
+        z-index: 3;
+    }
 }

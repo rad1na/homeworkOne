@@ -77,6 +77,9 @@ p {
     border-bottom: 3px solid;
     border-bottom-color: #00b4ff;
 }
+.nav-list span {
+    display: none;
+}
 li a img {
     height: 1rem;
 }
@@ -393,7 +396,7 @@ footer {
         justify-self:right;
     }
     
-    #toggle:checked ~ .mid-menu {
+    #toggle:checked + .mid-menu {
         display:block;
         position: absolute;
         top: 5rem;
@@ -405,6 +408,10 @@ footer {
         position: absolute;
         top: 14rem;
         z-index: 3;
+    }
+
+    .nav-list span {
+        display: inline;
     }
 
 }

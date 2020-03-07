@@ -420,30 +420,15 @@ footer {
     height: 1rem;
 }
 /* nav-bar sa checkboxom */
+
+.nav-list span {
+    display:none;
+}
+
 #toggle, #toggleLabel {
     display:none;
     font-size: 2rem;
 }
-
-.menu {
-    display: none;
-}
-
-.menu a {
-    background-color: white;
-    text-decoration: none;
-    color: #b0b2bb;
-    box-sizing: border-box;
-    padding: 0.5rem;
-
-}
-
-.menu a img {
-    height: 1rem;
-    vertical-align: middle;
-    color: grey;
-}
-
 @media only screen and (max-width: 1500px) {
     * {
         --marg: 8%;
@@ -619,38 +604,49 @@ footer {
     .nav-bar {
         grid-template-columns: 1fr 1fr;
     }
+
+    .menu {
+        display: none;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 104%;
+        margin: 0 -2% 0 -2%;
+    }
+
+    .menu .nav-list a {
+        display: block;
+        text-align: center;
+        background-color: white;
+        border-bottom: 1px solid #b0b2bb;
+    }
+
+    .menu .nav-list a:hover {
+        border-bottom: 1px solid #b0b2bb;
+        color: #00b4ff;
+    }
+    
     #toggleLabel {
         display: block;
         cursor: pointer;
         justify-self:right;
     }
-    #nav-menu {
-        display: none;
-    }
-
-    .menu {
-        text-align: center;
-        width: 104%;
-        margin: 0 -2% 0 -2%;
-        display: none;
-    }
-
-    .menu a {
-        display: block;
-        border-bottom: 1px solid #b0b2bb;
-    }
-
-    .menu a:hover {
-        color: #00b4ff;
-        transition: color 0.5s linear;
-    }
-
-    #toggle:checked + .menu {
-        
+    
+    #toggle:checked + .mid-menu {
         display:block;
         position: absolute;
         top: 5rem;
         z-index: 2;
+    }
+
+    #toggle:checked ~ .right-menu {
+        display:block;
+        position: absolute;
+        top: 14.1rem;
+        z-index: 3;
+    }
+
+    .nav-list span {
+        display: inline;
     }
 
 }
@@ -672,7 +668,7 @@ footer {
     }
 
     h5 {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     
     .arrow {
@@ -689,5 +685,11 @@ footer {
 
     .phone-image {
         display:block;
+    }
+    #toggle:checked ~ .right-menu {
+        display:block;
+        position: absolute;
+        top: 14rem;
+        z-index: 3;
     }
 }}
